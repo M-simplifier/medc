@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc-11 アクティブなファイルのビルド",
+			"command": "/usr/bin/gcc-11",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-I${workspaceFolder}/include/",
+				"${workspaceFolder}/src/*c",
+				"-g",
+				"-o",
+				"${workspaceFolder}/medc",
+				"-lncurses",
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "コンパイラ: /usr/bin/gcc-11"
+		}
+	]
+}
